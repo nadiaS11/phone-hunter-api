@@ -33,11 +33,31 @@
     </header>
     <main class="mx-auto bg-gray-400">
       <p class="my-4 font-bold text-center text-4xl mx-auto">All Phones here</p>
+      <div id="spinner" class="hidden text-center p-4 "><span class="loading loading-spinner loading-lg"></span></div>
       <div
         id="phone-container"
-        class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
       ></div>
-    </main>
+      <div id="show-all-container" class="hidden text-center py-4">
+        <button onclick="handleShowAll()" id="btn-show-all" class="btn btn-accent mx-auto ">Show All</button>
+      </div>
+
+      <!-- modal section -->
+      <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+  <form method="dialog" class="modal-box ">
+    <div id="show-details-container" class="card lg:card-side bg-base-100 ">
+  
+</div>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn">Close</button>
+    </div>
+  </form>
+</dialog>
+
+      </main>
     <footer></footer>
     <script src="./code.js"></script>
   </body>
